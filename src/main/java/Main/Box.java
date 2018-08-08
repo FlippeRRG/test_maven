@@ -9,6 +9,7 @@ public class Box<T extends Fruit> {
     public Box(Fruit fruit) {
         fruitBox.add( (T)fruit );
     }
+
     public boolean addFruit(Fruit fruit){
         if (fruit.getClass().equals( fruitBox.get( 0 ).getClass() )){
             fruitBox.add( (T)fruit );

@@ -1,6 +1,7 @@
 package Main;
 
 public class Apple extends Fruit {
+
     private Float fruitWeight;
 
     public Apple(Float fruitWeight) {

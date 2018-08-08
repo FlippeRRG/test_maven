@@ -1,7 +1,9 @@
 package Main;
 
 public class Orange extends Fruit {
+
     private Float fruitWeight;
+
     public Orange(Float fruitWeight) {
         super( fruitWeight );
     }

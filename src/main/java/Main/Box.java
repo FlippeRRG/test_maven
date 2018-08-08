@@ -1,14 +1,25 @@
 package Main;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Box<T extends Fruit> {
 
     private ArrayList<T> fruitBox = new ArrayList<>(  );
 
-    public Box(Fruit fruit) {
-        fruitBox.add( (T)fruit );
+    public Box(T fruit) {
+        fruitBox.add( fruit );
     }
+
+    public Box(T...fruit){
+       fruitBox = new ArrayList<>( Arrays.asList( fruit ) );
+       for(T fr : fruitBox){
+           if (!fruitBox.get( 0 ).getClass().equals( fr.getClass() )){
+               fruitBox.remove( fr );
+           }
+       }
+    }
+
     public boolean addFruit(Fruit fruit){
         if (fruit.getClass().equals( fruitBox.get( 0 ).getClass() )){
             fruitBox.add( (T)fruit );

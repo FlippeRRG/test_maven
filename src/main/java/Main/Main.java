@@ -12,12 +12,13 @@ public class Main {
         Apple apple1 = new Apple( 2.5f );
         Apple apple2 = new Apple( 3.5f );
         Apple apple3 = new Apple( 4.5f );
+        Apple apple4 = new Apple( 5.5f );
 
         Orange orange1 = new Orange( 1.5f );
         Orange orange2 = new Orange( 2.0f );
         Orange orange3 = new Orange( 3.0f );
 
-        Box<Fruit> box = new Box<Fruit>( apple1 );
+        Box<Fruit> box = new Box<Fruit>( apple1, apple4 );
         Box<Fruit> box1 = new Box<Fruit>( orange1 );
         box1.addFruit( orange2 ); // Добавление фрукта в коробку
         box1.addFruit( orange3 );

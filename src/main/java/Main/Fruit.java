@@ -1,6 +1,7 @@
 package Main;
 
 public class Fruit {
+
     private Float fruitWeight;
 
     public Fruit(Float fruitWeight) {

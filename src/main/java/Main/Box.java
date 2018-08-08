@@ -13,6 +13,11 @@ public class Box<T extends Fruit> {
 
     public Box(T...fruit){
        fruitBox = new ArrayList<>( Arrays.asList( fruit ) );
+       for(T fr : fruitBox){
+           if (!fruitBox.get( 0 ).getClass().equals( fr.getClass() )){
+               fruitBox.remove( fr );
+           }
+       }
     }
 
     public boolean addFruit(Fruit fruit){
